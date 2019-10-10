@@ -18,8 +18,8 @@ public class QuestionDaoImpl implements QuestionsDao {
 	
 	static {
 		try {
-			Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
-			con = DriverManager.getConnection("jdbc:odbc:AdvancedJava", "system", "manager");
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "manager");
 			
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
